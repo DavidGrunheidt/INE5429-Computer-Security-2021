@@ -1,0 +1,167 @@
+%==============================================================================
+% Computer Architecture
+%=============================================================================
+
+\newcommand{\manycore}{\textit{manycore}\xspace}
+\newcommand{\manycores}{\textit{manycores}\xspace}
+
+% Manycores
+\newcommand{\scc}{\textit{Intel Single-Cloud Computer}\xspace}
+\newcommand{\xeonphi}{\textit{Intel Xeon Phi}\xspace}
+\newcommand{\tilegx}{\textit{Tilera TILE-Gx100}\xspace}
+\newcommand{\tilepro}{\textit{Tilera TILE64}\xspace}
+%\newcommand{\mppa}{\textit{Kalray MPPA-256}\xspace}
+\newcommand{\taihulight}{\textit{Sunway SW26010}\xspace}
+\newcommand{\epiphany}{\textit{Adapteva Epiphany}\xspace}
+\newcommand{\optimsoc}{\textit{OpTiMSoC}\xspace}
+
+\newacronym{mppa-256}{MPPA-256}{\textit{Kalray MPPA-256}}
+	\newcommand{\mppa}{\gls{mppa-256}\xspace}
+
+% Taxonomy
+\newacronym{mimd}{MIMD}{\textit{Multiple Instruction Multiple Data}}
+	\newcommand{\mimd}{\gls{mimd}\xspace}
+\newacronym{simd}{SIMD}{\textit{Single Instruction Multiple Data}}
+	\newcommand{\simd}{\gls{simd}\xspace}
+\newacronym{numa}{NUMA}{\textit{Non-Uniform Memory Access}}
+	\newcommand{\numa}{\gls{numa}\xspace}
+\newacronym{norma}{NoRMA}{\textit{No Remote Memory Access}}
+	\newcommand{\norma}{\gls{norma}\xspace}
+\newacronym{amp}{AMP}{\textit{Asymmetric Multi-Processing}}
+	\newcommand{\amp}{\gls{amp}\xspace}
+\newacronym{gpu}{GPU}{\textit{Graphics Processing Unit}}
+	\newcommand{\gpu}{\gls{gpu}\xspace}
+	\newcommand{\gpus}{\glspl{gpu}\xspace}
+\newacronym{fpga}{FPGA}{\textit{Field Programmable Gate Array}}
+	\newcommand{\fpga}{\gls{fpga}\xspace}
+	\newcommand{\fpgas}{\glspl{fpga}\xspace}
+\newacronym{mpsoc}{MPSoC}{\textit{Multiprocessors System-on-Chip}}
+	\newcommand{\mpsoc}{\gls{mpsoc}\xspace}
+	\newcommand{\mpsocs}{\glspl{mpsoc}\xspace}
+
+% Core
+\newacronym{pe}{PE}{\textit{Processing Element}}
+	\newcommand{\pe}{\gls{pe}\xspace}
+	\newcommand{\pes}{\glspl{pe}\xspace}
+\newacronym{rm}{RM}{\textit{Resource Manager}}
+	\newcommand{\rman}{\gls{rm}\xspace}
+	\newcommand{\rmans}{\glspl{rm}\xspace}
+
+% Memory
+\newacronym{mmu}{MMU}{\textit{Memory Management Unit}}
+	\newcommand{\mmu}{\gls{mmu}\xspace}
+	\newcommand{\mmus}{\glspl{mmu}\xspace}
+
+\newacronym{spd}{SPM}{\textit{Scratchpad Memory}}
+	\newcommand{\spd}{\gls{spd}\xspace}
+\newacronym{dma}{DMA}{\textit{Direct Memory Access}}
+	\newcommand{\dma}{\gls{dma}\xspace}
+
+\newacronym{rma}{RMA}{\textit{Remote Memory Access}}
+	\newcommand{\rma}{\gls{rma}\xspace}
+
+% Interconnects
+\newacronym{noc}{NoC}{\textit{Network on Chip}}
+	\newcommand{\noc}{\gls{noc}\xspace}
+	\newcommand{\nocs}{\glspl{noc}\xspace}
+\newacronym{cnoc}{C-NoC}{\textit{Control NoC}}
+    \newcommand{\cnoc}{\gls{cnoc}\xspace} 
+\newacronym{dnoc}{D-NoC}{\textit{Data NoC}}
+	\newcommand{\dnoc}{\gls{dnoc}\xspace}     
+
+%==============================================================================
+% Operating Systems
+%=============================================================================
+
+\newacronym{posix}{POSIX}{\textit{Portable Operating System Interface}}
+	\newcommand{\posix}{\gls{posix}\xspace}
+
+\newacronym{api}{API}{\textit{Application Programming Interface}}
+	\newcommand{\api}{\gls{api}\xspace}
+	\newcommand{\apis}{\glspl{api}\xspace}
+
+% Kernels
+\newcommand{\linux}{\textit{GNU/Linux}\xspace}
+\newcommand{\unix}{\textit{Unix}\xspace}
+\newcommand{\rtems}{\textit{RTEMS}\xspace}
+\newcommand{\bsd}{\textit{BSD}\xspace}
+\newcommand{\nodeos}{\textit{NodeOS}\xspace}
+\newacronym{fos}{FOS}{\textit{Factored Operating System}}
+	\newcommand{\fos}{\gls{fos}\xspace}
+\newacronym{lfour}{L4}{\textit{L4 Microkernel}}
+	\newcommand{\lfour}{\gls{lfour}\xspace}
+\newacronym{nos}{nOS}{\textit{Nano-Sized Operating System}}
+	\newcommand{\nos}{\gls{nos}\xspace}
+
+\newacronym{ipc}{IPC}{\textit{Inter-Process Communication}}
+	\newcommand{\ipc}{\gls{ipc}\xspace}
+
+\newacronym{qos}{QoS}{\textit{Quality of Service}}
+	\newcommand{\qos}{\gls{qos}\xspace}
+
+\newacronym{hal}{HAL}{\textit{Hardware Abstraction Layer}}
+	\newcommand{\hal}{\gls{hal}\xspace}
+
+%==============================================================================
+% High Performance Computing
+%=============================================================================
+
+\newacronym{hpc}{HPC}{\textit{High-Performance Computing}}
+	\newcommand{\hpc}{\gls{hpc}\xspace}
+
+% Runtimes
+\newcommand{\openmp}{OpenMP}
+\newcommand{\openmpi}{OpenMPI\xspace}
+
+\newacronym{pgas}{PGAS}{\textit{Partitioned Global Address Space}}
+	\newcommand{\pgas}{\gls{pgas}\xspace}
+
+\newacronym{mpi}{MPI}{\textit{Message Passing Interface}}
+	\newcommand{\mpi}{\gls{mpi}\xspace}
+
+%==============================================================================
+% Other
+%=============================================================================
+
+\newacronym{rmem}{RMem}{\textit{Remote Memory}}
+	\newcommand{\rmem}{\gls{rmem}\xspace}
+
+\newcommand{\ie}{i.e.,\xspace}
+\newcommand{\etal}{\textit{et al.}\xspace}
+
+\newacronym{iid}{i.i.d}{\textit{Independent and Identically Distributed}}
+	\newcommand{\iid}{\gls{iid}\xspace}
+
+\newacronym{anova}{ANOVA}{\textit{Analysis of Variance}}
+	\newcommand{\anova}{\gls{anova}\xspace}
+
+\newacronym{mit}{MIT}{\textit{Massachusetts Institute of Technology}}
+	\newcommand{\unimit}{\gls{mit}\xspace}
+
+\newacronym{lig}{LIG}{\textit{Laboratoire d'Informatique de Grenoble}}
+    \newcommand{\lig}{\gls{lig}\xspace}
+
+\newacronym{lapesd}{LaPeSD}{\textit{Distributed Systems Research Laboratory}}
+    \newcommand{\lapesd}{\gls{lapesd}\xspace}
+
+\newacronym{ufsc}{UFSC}{{Universidade Federal de Santa Catarina}}
+    \newcommand{\ufsc}{\gls{ufsc}\xspace}
+	
+\newcommand{\cpcluster}{\textit{Compute Cluster}\xspace}
+\newcommand{\cpclusters}{\textit{Compute Clusters}\xspace}
+\newcommand{\iocluster}{\textit{IO Cluster}\xspace}
+\newcommand{\ioclusters}{\textit{IO Clusters}\xspace}
+
+\newcommand{\capb}{CAP Bench\xspace}
+
+\newacronym{ASYNC}{ASYNC}{\textit{MPPA Asynchronous Communication}}
+\newcommand{\async}{\gls{ASYNC}\xspace}
+
+\newacronym{cc}{CC}{\textit{cluster} de computação}
+	\newcommand{\cc}{\gls{cc}\xspace}
+
+\newacronym{ccs}{CCs}{\textit{clusters} de computação}
+	\newcommand{\ccs}{\gls{ccs}\xspace}
+   
+\newacronym{io}{E/S}{Entrada e Saída}
+    \newcommand{\io}{\gls{io}\xspace}
