@@ -110,13 +110,15 @@ void generate_rand(unsigned char *rand_bytes, int n_uint32_t, int n_chars, int g
             return exit(0);
         }
 
+        // Make sure that it will have the numbers of bytes we want (defined by n_chars), since n_uint32_t can have more bytes than n_chars.
         const int offset = uint32_t_index * BYTES_IN_UINT32_T;
-        memcpy(&rand_bytes[offset], bytes, BYTES_IN_UINT32_T * sizeof(char));
+        const int size = offset + BYTES_IN_UINT32_T > n_chars ? n_chars - offset : BYTES_IN_UINT32_T;
+        memcpy(&rand_bytes[offset], bytes, size * sizeof(char));
     }
 }
 
 
-void generate_random_number() {
+void generate_random_number(unsigned char **rand_numbers_xorshift, unsigned char **rand_numbers_parkmiller) {
     for (int generation_step = 0; generation_step < N_RAND_NUMBERS; generation_step++) { 
         const int result_bits_size = n_bits[generation_step];
         int bits_size = result_bits_size;
@@ -130,7 +132,7 @@ void generate_random_number() {
         }
 
         const int n_uint32_t = bits_size / UINT32_T_SIZE_IN_BITS;
-        const int n_chars = bits_size / BYTE_SIZE_IN_BITS;
+        const int n_chars = result_bits_size / BYTE_SIZE_IN_BITS;
 
         unsigned char rand_bytes_xorshift[n_chars];
         unsigned char rand_bytes_parkmiller[n_chars];
@@ -161,11 +163,30 @@ void generate_random_number() {
         }
         printf("\n\n");
         fflush(stdout);
+
+
+        // Memory allocation for each random number generation
+        const size_t size = n_chars * sizeof(char);
+        rand_numbers_xorshift[generation_step] = (unsigned char *) malloc(size);
+        rand_numbers_parkmiller[generation_step] = (unsigned char *) malloc(size);
+
+        memcpy(rand_numbers_xorshift[generation_step], rand_bytes_xorshift, size);
+        memcpy(rand_numbers_parkmiller[generation_step], rand_bytes_parkmiller, size);
     }
 }
 
 int main(int argc, char **argv) {
     printf("\n---- STARTING ----\n\n");
-    generate_random_number();
+
+    unsigned char *rand_numbers_xorshift[N_RAND_NUMBERS];
+    unsigned char *rand_numbers_parkmiller[N_RAND_NUMBERS];
+
+    generate_random_number(rand_numbers_xorshift, rand_numbers_parkmiller);
+
+    // Free memory allocation
+    for (int generation_step = 0; generation_step < N_RAND_NUMBERS; generation_step++) { 
+        free(rand_numbers_xorshift[generation_step]);
+        free(rand_numbers_parkmiller[generation_step]);
+    }
 }
 
