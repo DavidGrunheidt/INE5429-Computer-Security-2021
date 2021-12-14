@@ -6,6 +6,7 @@
 #include <string.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <gmp.h>
 
 /* 
  * Xorshift 128 bits. 

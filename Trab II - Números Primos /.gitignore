@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# But not these files...
+!.gitignore
+!gmp-6.2.1/*
+!TrabMakefile
+!main.c
+# etc...
