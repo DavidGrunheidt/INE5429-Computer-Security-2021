@@ -43,29 +43,6 @@ uint32_t xorshift32(xorshift32_state *state) {
 }
 
 /* 
- * msleep(): Sleep for the requested number of milliseconds. 
- * Taken from https://stackoverflow.com/a/1157217/16808367
- */
-int msleep(long msec) {
-    struct timespec ts;
-    int res;
-
-    if (msec < 0) {
-        errno = EINVAL;
-        return -1;
-    }
-
-    ts.tv_sec = msec / 1e3;
-    ts.tv_nsec = (msec % (long) 1e3) * 1e6;
-
-    do {
-        res = nanosleep(&ts, &ts);
-    } while (res && errno == EINTR);
-
-    return res;
-}
-
-/* 
  * Miller Rabin
  * Taken from https://www.sanfoundry.com/c-program-implement-rabin-miller-primality-test-check-number-prime/
  */ 
@@ -364,7 +341,5 @@ int main(int argc, char **argv) {
             fflush(stdout);
         }
     }
-
-    // check_primalitys(rand_numbers_xorshift, rand_numbers_parkmiller);
 }
 
