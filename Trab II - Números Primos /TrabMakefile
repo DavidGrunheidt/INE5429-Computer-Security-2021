@@ -1,7 +1,0 @@
-.PHONY: start
-
-start:
-	./gmp-6.2.1/configure && make
-	gcc main.c -lgmp -o main
-	chmod +X main
-	./main

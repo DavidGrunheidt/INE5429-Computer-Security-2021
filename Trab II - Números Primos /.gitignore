@@ -5,6 +5,6 @@
 # But not these files...
 !.gitignore
 !/gmp-6.2.1/
-!TrabMakefile
+!TrabMakefile.mk
 !main.c
 # etc...
