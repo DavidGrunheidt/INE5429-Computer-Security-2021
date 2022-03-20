@@ -7,9 +7,9 @@ const express = require('express');
 const app = express();
 
 // Certificate
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/chain.pem', 'utf8');
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/trabgrupotlsine.zapto.org/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/trabgrupotlsine.zapto.org/cert.pem', 'utf8');
+const ca = fs.readFileSync('/etc/letsencrypt/live/trabgrupotlsine.zapto.org/chain.pem', 'utf8');
 
 const credentials = {
   key: privateKey,
