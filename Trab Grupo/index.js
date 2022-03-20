@@ -17,6 +17,11 @@ const credentials = {
   ca: ca
 };
 
+// set up a route to redirect http to https
+http.get('*', function(req, res) {  
+    res.redirect('https://' + req.headers.host + req.url);
+})
+
 app.use((req, res) => {
   res.send('Hello there !');
 });
